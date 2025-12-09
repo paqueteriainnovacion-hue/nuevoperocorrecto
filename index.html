@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Formulario - Minimalista (Lilas & Pistache)</title>
 
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="fiesta_1.png">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -26,41 +29,5 @@
       <div class="fields">
         <div>
           <label for="nombre">Nombre</label>
-          <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required autocomplete="given-name" />
-        </div>
+          <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required
 
-        <div>
-          <label for="apellido">Apellido</label>
-          <input id="apellido" name="apellido" type="text" placeholder="Tu apellido" required autocomplete="family-name" />
-        </div>
-
-        <div>
-          <label for="edad">Edad</label>
-          <input id="edad" name="edad" type="number" placeholder="Ej. 28" min="0" max="130" step="1" required />
-        </div>
-
-        <div>
-          <label for="telefono">Teléfono</label>
-          <input id="telefono" name="telefono" type="tel"
-                 placeholder="+5215512345678" required
-                 pattern="^\+?\d{7,15}$"
-                 title="Introduce un número válido (solo dígitos, puedes incluir + al inicio)." />
-        </div>
-
-        <div class="full">
-          <label for="correo">Correo electrónico</label>
-          <input id="correo" name="correo" type="email" placeholder="tucorreo@ejemplo.com"
-                 required autocomplete="email" />
-        </div>
-      </div>
-
-      <div class="actions">
-        <div class="note" aria-hidden="true">Usamos solo los datos necesarios — diseño minimal.</div>
-        <button type="submit" id="btnEnviar">Enviar</button>
-      </div>
-    </form>
-  </main>
-
-  <script src="script.js"></script>
-</body>
-</html>
