@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Formulario - Minimalista (Lilas & Pistache)</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="form-card" role="main" aria-labelledby="form-title">
+    <div id="notif" class="success" role="status" aria-live="polite">
+      Datos guardados correctamente
+    </div>
+
+    <div class="brand" aria-hidden="false">
+      <div class="brand-badge">FI</div>
+      <div>
+        <h1 id="form-title">Registro rápido</h1>
+        <p class="lead">Introduce tus datos para completar el registro — diseño minimalista en lilas y pistache.</p>
+      </div>
+    </div>
+
+    <!-- FORMULARIO DIRECTO A GOOGLE SHEETS -->
+    <form id="registro" action="https://script.google.com/macros/s/AKfycbz7r1Tf3-xoC7f7V-u4Yz3CUIJz63OX8E3DyPOKXMbdzwCPJ83Yb4WHOJgfv3Qchc1H8g/exec" method="POST">
+      <div class="fields">
+        <div>
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required autocomplete="given-name" />
+        </div>
+
+        <div>
+          <label for="apellido">Apellido</label>
+          <input id="apellido" name="apellido" type="text" placeholder="Tu apellido" required autocomplete="family-name" />
+        </div>
+
+        <div>
+          <label for="edad">Edad</label>
+          <input id="edad" name="edad" type="number" placeholder="Ej. 28" min="0" max="130" step="1" required />
+        </div>
+
+        <div>
+          <label for="telefono">Teléfono</label>
+          <input id="telefono" name="telefono" type="tel"
+                 placeholder="+5215512345678" required
+                 pattern="^\+?\d{7,15}$"
+                 title="Introduce un número válido (solo dígitos, puedes incluir + al inicio)." />
+        </div>
+
+        <div class="full">
+          <label for="correo">Correo electrónico</label>
+          <input id="correo" name="correo" type="email" placeholder="tucorreo@ejemplo.com"
+                 required autocomplete="email" />
+        </div>
+      </div>
+
+      <div class="actions">
+        <div class="note" aria-hidden="true">Usamos solo los datos necesarios — diseño minimal.</div>
+        <button type="submit" id="btnEnviar">Enviar</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
